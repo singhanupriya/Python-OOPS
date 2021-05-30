@@ -50,3 +50,5 @@ print(Point.getx)
 #gives the address of the instance method
 print(origin.getx)
 
+print(origin.x, origin.y)
+

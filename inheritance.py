@@ -10,7 +10,7 @@ class Person:
         return self.name
 
     def greeting(self):
-        return f"Hello {self.name}"
+        print( f"Hello {self.name}")
     
     def get_age(self):
         return self.age
@@ -18,17 +18,19 @@ class Person:
     def __str__(self):
         return f"{self.name} has an age of {self.age} years"
 
-class Student:
+class Student(Person):
     
     def __init__(self,name,age,standard):
         super().__init__(name,age)
         self.standard=standard
     
     def greeting(self):
-        return f"Hello student {self.name}"
+        
+        print( f"Hello student {self.name}")
+        super().greeting()
     
     def __str__(self):
-        super().__str__('Student')
+        super().__str__()
         return f"You are in class {self.standard}"
 
 
@@ -39,3 +41,4 @@ print(harry.greeting())
 
 ron=Student("Ron",15,6)
 print(ron)
+ron.greeting()
